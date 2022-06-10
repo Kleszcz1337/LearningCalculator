@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %} Learning calculator {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <header>Learning Calculator</header>
+
+        <form action="#" method="post">
+            <div class="first-form">
+                <div class="first-part">
+
+                    <span class="title">First inputs</span>
+                    <div class="fields">
+                
+                        <div class="input-field">
+                            <label>Start date</label>
+                            <input type="date" name="firstDate" placeholder="Enter start date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>End date</label>
+                            <input type="date" name="secondDate" placeholder="Enter end date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Number of hours</label>
+                            <input type="number" name="number" placeholder="Enter number" required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="submit">
+                    Submit
+                </button>
+
+                <div class="output">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for msg in messages %}
+                                <p>{{msg}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+{% endblock %}

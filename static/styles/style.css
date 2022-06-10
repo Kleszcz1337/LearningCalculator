@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #07273a;
+}
+
+.container{
+    max-width: 70vw;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+
+
+    background-color: #085280;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);;
+}
+
+.container header{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(48, 196, 245);
+}
+
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    overflow: hidden;
+}
+.container form .first-form{
+    position: absolute;
+    transition: 0.3s ease;
+}
+
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: rgb(182, 238, 255);
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 2px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #b8f4ff;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid rgb(28, 179, 255);
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+.container form button{
+    text-align: center;
+    height: 45px;
+    max-width: 150px;
+    width: 100%;
+    border: none;
+
+    color: #fff;
+    border-radius: 50px;
+    margin: 25px 0;
+    background-color: #4070f4;
+
+    transition: all 0.5s linear;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+form button:hover{
+    background-color: #265df2;
+}
+
+.output{
+    width: 27vw;
+    min-height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
